@@ -1,10 +1,20 @@
 import {
   GET_CONTACTS,
+  GET_CONTACT_SUCCESS,
+  GET_CONTACTS_FAILURE,
   DELETE_CONTACT,
+  DELETE_CONTACT_SUCCESS,
+  DELETE_CONTACT_FAILURE,
   ADD_CONTACT,
+  ADD_CONTACT_SUCCESS,
+  ADD_CONTACT_FAILURE,
   GET_CONTACT,
-  UPDATE_CONTACT
-} from '../actions/types';
+  GET_CONTACTS_SUCCESS,
+  GET_CONTACT_FAILURE,
+  UPDATE_CONTACT,
+  UPDATE_CONTACT_SUCCESS,
+  UPDATE_CONTACT_FAILURE
+} from "../actions/types";
 
 const initialState = {
   contacts: [],
@@ -16,8 +26,22 @@ export default function(state = initialState, action) {
     case GET_CONTACTS:
       return {
         ...state,
-        contacts: action.payload
+        contacts: action.payload,
+        isLoading: true
       };
+    case GET_CONTACTS_SUCCESS:
+      return {
+        ...state,
+        contacts: action.payload,
+        isLoading: true
+      };
+    case GET_CONTACTS_FAILURE:
+      return {
+        ...state,
+        error: action.error,
+        isLoading: true
+      };
+
     case GET_CONTACT:
       return {
         ...state,
@@ -38,11 +62,10 @@ export default function(state = initialState, action) {
     case UPDATE_CONTACT:
       return {
         ...state,
-        contacts: state.contacts.map(
-          contact =>
-            contact.id === action.payload.id
-              ? (contact = action.payload)
-              : contact
+        contacts: state.contacts.map(contact =>
+          contact.id === action.payload.id
+            ? (contact = action.payload)
+            : contact
         )
       };
     default:

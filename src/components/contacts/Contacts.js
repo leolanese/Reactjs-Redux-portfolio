@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import Contact from './Contact';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import { getContacts } from '../../actions/contactActions';
+import React, { Component } from "react";
+import Contact from "./Contact";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { getContactsAction } from "../../actions/contactActions";
 
 class Contacts extends Component {
   componentDidMount() {
-    this.props.getContacts();
+    this.props.getContactsAction();
   }
 
   render() {
@@ -17,12 +17,8 @@ class Contacts extends Component {
         <h1 className="display-4 mb-2">
           <span className="text-info">Portfolio</span> Leo Lanese
         </h1>
-        {
-          contacts.map(contact => (
-          <Contact
-            key={contact.id}
-            contact={contact}
-          />
+        {contacts.map(contact => (
+          <Contact key={contact.id} contact={contact} />
         ))}
       </React.Fragment>
     );
@@ -31,14 +27,11 @@ class Contacts extends Component {
 
 Contacts.propTypes = {
   contacts: PropTypes.array.isRequired,
-  getContacts: PropTypes.func.isRequired
+  getContactsAction: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
   contacts: state.contact.contacts
 });
 
-export default connect(
-  mapStateToProps,
-  { getContacts }
-)(Contacts);
+export default connect(mapStateToProps, { getContactsAction })(Contacts);
