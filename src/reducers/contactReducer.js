@@ -26,48 +26,99 @@ export default function(state = initialState, action) {
     case GET_CONTACTS:
       return {
         ...state,
-        contacts: action.payload,
         isLoading: true
       };
     case GET_CONTACTS_SUCCESS:
       return {
         ...state,
         contacts: action.payload,
-        isLoading: true
+        isLoading: false
       };
     case GET_CONTACTS_FAILURE:
       return {
         ...state,
         error: action.error,
-        isLoading: true
+        isLoading: false
       };
 
     case GET_CONTACT:
       return {
         ...state,
-        contact: action.payload
+        isLoading: true
       };
+    case GET_CONTACT_SUCCESS:
+      return {
+        ...state,
+        contact: action.payload,
+        isLoading: false
+      };
+    case GET_CONTACT_FAILURE:
+      return {
+        ...state,
+        error: action.error,
+        isLoading: false
+      };
+
     case DELETE_CONTACT:
+      return {
+        ...state,
+        isLoading: true
+      };
+    case DELETE_CONTACT_SUCCESS:
       return {
         ...state,
         contacts: state.contacts.filter(
           contact => contact.id !== action.payload
-        )
+        ),
+        isLoading: false
       };
+    case DELETE_CONTACT_FAILURE:
+      return {
+        ...state,
+        error: action.error,
+        isLoading: false
+      };
+
     case ADD_CONTACT:
       return {
         ...state,
-        contacts: [action.payload, ...state.contacts]
+        isLoading: true
       };
+    case ADD_CONTACT_SUCCESS:
+      return {
+        ...state,
+        contacts: [action.payload, ...state.contacts],
+        isLoading: false
+      };
+    case ADD_CONTACT_FAILURE:
+      return {
+        ...state,
+        error: action.error,
+        isLoading: false
+      };
+
     case UPDATE_CONTACT:
+      return {
+        ...state,
+        isLoading: true
+      };
+    case UPDATE_CONTACT_SUCCESS:
       return {
         ...state,
         contacts: state.contacts.map(contact =>
           contact.id === action.payload.id
             ? (contact = action.payload)
             : contact
-        )
+        ),
+        isLoading: false
       };
+    case UPDATE_CONTACT_FAILURE:
+      return {
+        ...state,
+        error: action.error,
+        isLoading: false
+      };
+
     default:
       return state;
   }

@@ -1,3 +1,5 @@
+// all the above are possible constants that define what possible actions can be performed.
+
 export const GET_CONTACTS = "GET_CONTACTS";
 export const GET_CONTACTS_SUCCESS = "GET_CONTACTS_SUCCESS";
 export const GET_CONTACTS_FAILURE = "GET_CONTACTS_FAILURE";

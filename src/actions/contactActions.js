@@ -1,10 +1,21 @@
 import {
   GET_CONTACTS,
+  GET_CONTACTS_SUCCESS,
+  GET_CONTACTS_FAILURE,
   DELETE_CONTACT,
+  DELETE_CONTACT_SUCCESS,
+  DELETE_CONTACT_FAILURE,
   ADD_CONTACT,
+  ADD_CONTACT_SUCCESS,
+  ADD_CONTACT_FAILURE,
   GET_CONTACT,
-  UPDATE_CONTACT
-} from "./types";
+  GET_CONTACT_SUCCESS,
+  GET_CONTACT_FAILURE,
+  UPDATE_CONTACT,
+  UPDATE_CONTACT_SUCCESS,
+  UPDATE_CONTACT_FAILURE
+} from "../actions/types";
+
 import axios from "axios";
 
 // List of Actions
@@ -13,10 +24,11 @@ export const getContactsAction = () => async dispatch => {
   const response = await axios.get(
     "https://raw.githubusercontent.com/leolanese/reactjs-playground/master/src/resources/experience.json"
   );
-  console.log("getContactsAction:");
+  console.log("getContactsAction");
   console.table([response.data][0]);
+
   dispatch({
-    type: GET_CONTACTS,
+    type: GET_CONTACTS_SUCCESS,
     payload: response.data
   });
 };
@@ -27,16 +39,16 @@ export const getContactAction = id => async dispatch => {
   );
   console.log("getContactAction");
   dispatch({
-    type: GET_CONTACT,
+    type: GET_CONTACT_SUCCESS,
     payload: res.data
   });
 };
 
 export const deleteContactAction = id => async dispatch => {
-  console.log("deleteContactAction");
   await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+  console.log("deleteContactAction");
   dispatch({
-    type: DELETE_CONTACT,
+    type: DELETE_CONTACT_SUCCESS,
     payload: id
   });
 };
@@ -48,7 +60,7 @@ export const addContactAction = contact => async dispatch => {
   );
   console.log("addContactAction");
   dispatch({
-    type: ADD_CONTACT,
+    type: ADD_CONTACT_SUCCESS,
     payload: res.data
   });
 };
@@ -60,7 +72,7 @@ export const updateContactAction = contact => async dispatch => {
   );
   console.log("updateContactAction");
   dispatch({
-    type: UPDATE_CONTACT,
+    type: UPDATE_CONTACT_SUCCESS,
     payload: res.data
   });
 };
