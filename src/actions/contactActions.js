@@ -21,36 +21,74 @@ import axios from "axios";
 // List of Actions
 export const getContactsAction = () => async dispatch => {
   // const res = await axios.get('https://jsonplaceholder.typicode.com/users');
-  const response = await axios.get(
+  const res = await axios.get(
     "https://raw.githubusercontent.com/leolanese/reactjs-playground/master/src/resources/experience.json"
   );
   console.log("getContactsAction");
-  console.table([response.data][0]);
+  console.table([res.data][0]);
 
   dispatch({
-    type: GET_CONTACTS_SUCCESS,
-    payload: response.data
+    type: GET_CONTACTS
   });
+  try {
+    // Update payload in reducer on success
+    dispatch({
+      type: GET_CONTACTS_SUCCESS,
+      payload: res.data
+    });
+  } catch (err) {
+    // Update error in reducer on failure
+    dispatch({
+      type: GET_CONTACTS_FAILURE,
+      error: err
+    });
+  }
 };
 
 export const getContactAction = id => async dispatch => {
   const res = await axios.get(
     `https://jsonplaceholder.typicode.com/users/${id}`
   );
+
   console.log("getContactAction");
   dispatch({
-    type: GET_CONTACT_SUCCESS,
-    payload: res.data
+    type: GET_CONTACT
   });
+  try {
+    // Update payload in reducer on success
+    dispatch({
+      type: GET_CONTACT_SUCCESS,
+      payload: res.data
+    });
+  } catch (err) {
+    // Update error in reducer on failure
+    dispatch({
+      type: GET_CONTACT_FAILURE,
+      error: err
+    });
+  }
 };
 
 export const deleteContactAction = id => async dispatch => {
   await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+
   console.log("deleteContactAction");
   dispatch({
-    type: DELETE_CONTACT_SUCCESS,
-    payload: id
+    type: DELETE_CONTACT
   });
+  try {
+    // Update payload in reducer on success
+    dispatch({
+      type: DELETE_CONTACT_SUCCESS,
+      payload: id
+    });
+  } catch (err) {
+    // Update error in reducer on failure
+    dispatch({
+      type: DELETE_CONTACT_FAILURE,
+      error: err
+    });
+  }
 };
 
 export const addContactAction = contact => async dispatch => {
@@ -58,11 +96,24 @@ export const addContactAction = contact => async dispatch => {
     "https://jsonplaceholder.typicode.com/users",
     contact
   );
+
   console.log("addContactAction");
   dispatch({
-    type: ADD_CONTACT_SUCCESS,
-    payload: res.data
+    type: ADD_CONTACT
   });
+  try {
+    // Update payload in reducer on success
+    dispatch({
+      type: ADD_CONTACT_SUCCESS,
+      payload: res.data
+    });
+  } catch (err) {
+    // Update error in reducer on failure
+    dispatch({
+      type: ADD_CONTACT_FAILURE,
+      error: err
+    });
+  }
 };
 
 export const updateContactAction = contact => async dispatch => {
@@ -70,9 +121,22 @@ export const updateContactAction = contact => async dispatch => {
     `https://jsonplaceholder.typicode.com/users/${contact.id}`,
     contact
   );
+
   console.log("updateContactAction");
   dispatch({
-    type: UPDATE_CONTACT_SUCCESS,
-    payload: res.data
+    type: UPDATE_CONTACT
   });
+  try {
+    // Update payload in reducer on success
+    dispatch({
+      type: UPDATE_CONTACT_SUCCESS,
+      payload: res.data
+    });
+  } catch (err) {
+    // Update error in reducer on failure
+    dispatch({
+      type: UPDATE_CONTACT_FAILURE,
+      error: err
+    });
+  }
 };
