@@ -18,14 +18,46 @@ import { far } from "@fortawesome/free-regular-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
+function Comment(props) {
+  return (
+    <div className="Comment">
+      <div className="container p-3 my-3 border">
+        <span>
+          <img
+            className="Avatar"
+            src={props.author.avatarUrl}
+            alt={props.author.name}
+          />
+          <h1 className="UserInfo-name">{props.author.name}</h1>
+        </span>
+        <p>{props.text}</p>
+        <p>{props.extraText}</p>
+      </div>
+      <div className="UserInfo"></div>
+      <div className="Comment-text"></div>
+    </div>
+  );
+}
+
+const about = {
+  text:
+    "I'm a passionately curious Front-end Engineer. Coding better code for a better world. London, UK.",
+  extraText:
+    "I have been working in different countries for several clients as a Software Engineer with Front-end focus but also Back-end using: Angular 4/6/7/8, AngularJS, ReactJS, Svelte, ContextAPI/Redux:@ngrx, react-redux/redux-thunk, IP/OOP/Functional Programming/Reactive Functional Programming, javaScript/ES6+/TS, Callback/ Promise/ Observable, RxJS, Responsive Web Design, Mobile First, CSS/SASS, Angular Material 2/CDK, HTML5, Web/Mobile usability and accessibility. Sonar. Karma/Jasmine/Jest, GIT, CI/CD, Jenkins, GitLab. Using architectures Monolithic/Micro-frontends. Using backend technologies: RestAPI, Java(JSP), Python 3+, PHP and data-bases: PouchDB, MongoDB and MySQL. These have been the main roles I have fulfilled during this time, also combined with smaller freelance commercial and personal projects.",
+  author: {
+    name: "UI Software Engineer",
+    avatarUrl:
+      "https://pbs.twimg.com/profile_images/461911767384616961/qNMRa7-w_normal.jpeg"
+  }
+};
+
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Header title="Portfolio - Leo Lanese" />
-
+            <Header title="About - Leo Lanese" />
             <div className="container">
               <Switch>
                 <Route exact path="/" component={Contacts} />
@@ -34,15 +66,13 @@ class App extends Component {
                 <Route exact path="/about" component={About} />
                 <Route component={NotFound} />
               </Switch>
-
-              <Route exact path="/contacts">
-                <Contacts />
-              </Route>
-
-              <Route exact path="/about">
-                <About />
-              </Route>
             </div>
+            ,
+            <Comment
+              text={about.text}
+              extraText={about.extraText}
+              author={about.author}
+            />
           </div>
         </Router>
       </Provider>

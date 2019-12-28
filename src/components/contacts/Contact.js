@@ -5,13 +5,17 @@ import { connect } from "react-redux";
 import { deleteContactAction } from "../../actions/contactActions";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSortDown, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import {
-  faPen,
-  faCheck,
-  faSortDown,
-  faTrashAlt
-} from "@fortawesome/free-solid-svg-icons";
-import { faReact, faAngular, faJs } from "@fortawesome/free-brands-svg-icons";
+  faReact,
+  faAngular,
+  faJs,
+  faCss3,
+  faBootstrap,
+  faGitSquare,
+  faJenkins,
+  faNpm
+} from "@fortawesome/free-brands-svg-icons";
 
 class Contact extends Component {
   state = {
@@ -29,9 +33,6 @@ class Contact extends Component {
     return (
       <div className="card card-body mb-3">
         <span>
-          <FontAwesomeIcon icon={faReact} color="#5ed4f4" />
-          <FontAwesomeIcon icon={faAngular} color="#b13138" />
-          <FontAwesomeIcon icon={faJs} color="#f7df1e" />
           {contact.company}{" "}
           <FontAwesomeIcon
             icon={faSortDown}
@@ -72,6 +73,16 @@ class Contact extends Component {
           </Link>
           {showContactInfo ? (
             <ul className="list-group">
+              <li className="list-group-item">
+                <FontAwesomeIcon icon={faReact} color="#5ed4f4" />
+                <FontAwesomeIcon icon={faAngular} color="#b13138" />
+                <FontAwesomeIcon icon={faJs} color="#f7df1e" />
+                <FontAwesomeIcon icon={faCss3} color="#d8e322" />
+                <FontAwesomeIcon icon={faBootstrap} color="#563d7c" />
+                <FontAwesomeIcon icon={faGitSquare} color="#563d7c" />
+                <FontAwesomeIcon icon={faJenkins} color="#563d7c" />
+                <FontAwesomeIcon icon={faNpm} color="#563d7c" />
+              </li>
               <li className="list-group-item">{contact.role}</li>
               <li className="list-group-item">
                 {contact.date}
