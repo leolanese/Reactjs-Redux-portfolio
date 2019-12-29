@@ -11,6 +11,7 @@
     "axios": "^0.18.0",
     "bootstrap": "^4.1.2",
     "classnames": "^2.2.6",
+    "eslint": "^5.16.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
@@ -27,9 +28,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -43,6 +41,11 @@
     ]
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
     "prettier": "1.19.1"
   }
 }
