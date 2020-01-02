@@ -1,4 +1,4 @@
-# reactjs-redux-portfolio
+# Reactjs redux portfolio
 
 ## Available Scripts
 
