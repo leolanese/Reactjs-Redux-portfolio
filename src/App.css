@@ -10,13 +10,19 @@
   background: whitesmoke;
 }
 
-.Avatar {
+.avatar {
   position: relative;
   left: 0;
+  display: inline-block;
   margin-right: 15px;
   width: 130px;
   height: 130px;
   border: 2px solid #fff;
   box-shadow: 0 6px 5px #ccc;
   border-radius: 190px;
+}
+
+.container > span > h1
+{
+  display: inline-block;
 }
