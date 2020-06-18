@@ -18,16 +18,16 @@ yarn run build
 </h5>
 </br>
 <h5>Twitter:
-<a href="http://twitter.com/LeoLaneseltd" target="_blank">twitter.com/LeoLaneseltd</a>
+<a href="http://twitter.com/LeoLaneseltd" target="_blank" rel="noreferrer noopener">twitter.com/LeoLaneseltd</a>
 </h5>
 <h5>Portfolio
-<a href="http://www.leolanese.com" target="_blank">http://www.leolanese.com</a>
+<a href="http://www.leolanese.com" target="_blank" rel="noreferrer noopener">http://www.leolanese.com</a>
 </h5>
 <h5>DEV.to:
-<a href="http://www.dev.to/leolanese" target="_blank">dev.to/leolanese</a>
+<a href="http://www.dev.to/leolanese" target="_blank" rel="noreferrer noopener">dev.to/leolanese</a>
 </h5>
 <h5>Blog:
-<a href="http://www.leolanese.com/blog" target="_blank">leolanese.com/blog</a>
+<a href="http://www.leolanese.com/blog" target="_blank" rel="noreferrer noopener">leolanese.com/blog</a>
 </h5>
 <h5>Questions / Suggestion / Recommendation ?
 <a href="mail:to">developer@leolanese.com</a>

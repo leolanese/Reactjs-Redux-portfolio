@@ -1,20 +1,14 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { deleteContactAction } from "../../actions/contactActions";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSortDown, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
+import { faSortDown } from "@fortawesome/free-solid-svg-icons";
 import {
   faReact,
   faAngular,
-  faJs,
-  faCss3,
-  faBootstrap,
-  faGitSquare,
-  faJenkins,
-  faNpm
+  faJs
 } from "@fortawesome/free-brands-svg-icons";
 
 class Contact extends Component {
@@ -61,28 +55,6 @@ class Contact extends Component {
               marginRight: "1rem"
             }}
           />
-          {/* <FontAwesomeIcon
-            icon={faTrashAlt}
-            className="delete-icon"
-            onClick={this.onDeleteClick.bind(this, contact.id)}
-            style={{
-              cursor: "pointer",
-              float: "right",
-              color: "#922626",
-              marginRight: "1rem"
-            }}
-          /> */}
-          {/* <Link to={`contact/edit/${contact.id}`}>
-            <i
-              className="fas fa-pencil-alt"
-              style={{
-                cursor: "pointer",
-                float: "right",
-                color: "blue",
-                marginRight: "1rem"
-              }}
-            />
-          </Link> */}
           {showContactInfo ? (
             <ul className="list-group">
               <li className="list-group-item">
