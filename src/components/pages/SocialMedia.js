@@ -1,59 +1,36 @@
 import React from "react";
 
-import { CommentsThanks } from "./../layout/CommentsThanks";
-import { about_media } from "./../content/brief";
-
-import { Title } from './../layout/title';
-import { SubTitle } from './../layout/subtitle';
-
-export default () => {
+export const SocialMedia = function(props) {
   return (
     <div>
-      <Title></Title>
-      <SubTitle></SubTitle>
+      <div className="container p-3 my-3 border wrapper-box">
 
-      <CommentsThanks
-        text={about_media.text}
-      />
+        <h4> Thanks </h4>
+        <h5>'Leo Lanese',
+          'Building Inspiring Responsive Reactive Solutions',
+          'London, UK'
+        </h5>
+        <h5>Twitter:
+        <a href="http://twitter.com/LeoLaneseltd" target="_blank">twitter.com/LeoLaneseltd</a>
+        </h5>
+        <h5>Portfolio
+        <a href="http://www.leolanese.com" target="_blank">http://www.leolanese.com</a>
+        </h5>
+        <h5>DEV.to:
+        <a href="http://www.dev.to/leolanese" target="_blank">dev.to/leolanese</a>
+        </h5>
+        <h5>Blog:
+        <a href="http://www.leolanese.com/blog" target="_blank">leolanese.com/blog</a>
+        </h5>
+        <h5>Questions / Suggestion / Recommendation ?
+        <a href="mail:to">developer@leolanese.com</a>
+        </h5>
 
-    <div class="container p-3 my-3 border">
-      <h3>ReactJS Experience:</h3>
-      <ul>
-          <li>
-            <a href="https://github.com/leolanese/reactjs-redux-portfolio" title="Check the ReactJS code">Check the Github ReactJS source code</a>
-          </li>
-          <li>
-            <a href="https://github.com/search?q=user%3Aleolanese+react" title="Some other interesting ReactJS projects">Some other ReactJS projects</a>
-          </li>
-          <li>
-            <a href="https://www.leolanese.com/portfolio_react/index.html">Portfolio DEMO</a>
-          </li>
-          <li>
-            React tooling: Storybook,
-          </li>
-      </ul>
-      <h3>Angular Experience:</h3>
-      <ul>
-          <li>
-            <a href="https://github.com/leolanese/Angular-Profile" title="Check the ReactJS code">Check the Github Angular source code</a>
-          </li>
-          <li>
-            <a href="https://github.com/leolanese?tab=repositories&q=angular&type=&language=" title="Some other interesting ReactJS projects">Some other Angular projects</a>
-          </li>
-          <li>
-            <a href="https://www.leolanese.com/portfolio_angular/index.html">Portfolio DEMO</a>
-          </li>
-          <li>
-            Angular tooling: Storybook,
-          </li>
-      </ul>
-      <h3>Generic Technology Experience:</h3>
-      <ul>
-        <li>
-          Tooling: npm. npx
-        </li>
-      </ul>
+      </div>
+
+
     </div>
-  </div>
   );
 };
+
+export default SocialMedia;

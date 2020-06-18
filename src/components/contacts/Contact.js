@@ -39,8 +39,12 @@ class Contact extends Component {
     }
 
     return (
-      <div className="card card-body mb-3">
-        <span>
+      <div className="card card-body mb-3 wrapper-box">
+        <span onClick={() =>
+              this.setState({
+                showContactInfo: !this.state.showContactInfo
+              })
+            }>
           {contact.company}{" "}
           <FontAwesomeIcon
             icon={faSortDown}
@@ -52,12 +56,12 @@ class Contact extends Component {
             }
             style={{
               cursor: "pointer",
-              fontSize: "2em",
-              top: "-5px",
-              position: "relative"
+              float: "right",
+              color: "blue",
+              marginRight: "1rem"
             }}
           />
-          <FontAwesomeIcon
+          {/* <FontAwesomeIcon
             icon={faTrashAlt}
             className="delete-icon"
             onClick={this.onDeleteClick.bind(this, contact.id)}
@@ -67,8 +71,8 @@ class Contact extends Component {
               color: "#922626",
               marginRight: "1rem"
             }}
-          />
-          <Link to={`contact/edit/${contact.id}`}>
+          /> */}
+          {/* <Link to={`contact/edit/${contact.id}`}>
             <i
               className="fas fa-pencil-alt"
               style={{
@@ -78,7 +82,7 @@ class Contact extends Component {
                 marginRight: "1rem"
               }}
             />
-          </Link>
+          </Link> */}
           {showContactInfo ? (
             <ul className="list-group">
               <li className="list-group-item">

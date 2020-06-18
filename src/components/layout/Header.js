@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-const Header = props => {
+export const Header = props => {
   const { branding } = props;
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-secondary mb-3 py-0">
@@ -12,6 +12,11 @@ const Header = props => {
             <li className="nav-item">
               <Link to="/" className="nav-link">
                 Portfolio
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/specialisation" className="nav-link">
+                Specialisation
               </Link>
             </li>
             <li className="nav-item">

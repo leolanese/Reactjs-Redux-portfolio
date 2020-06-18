@@ -5,9 +5,11 @@ import Contacts from "./components/contacts/Contacts";
 import AddContactAction from "./components/contacts/AddContact";
 import EditContact from "./components/contacts/EditContact";
 import Header from "./components/layout/Header";
+
 import About from "./components/pages/About";
 import SocialMedia from "./components/pages/SocialMedia";
 import NotFound from "./components/pages/NotFound";
+import Specialisation from "./components/pages/Specialisation"
 
 import { about, about_media } from "./components/content/brief";
 
@@ -34,9 +36,10 @@ class App extends Component {
             <div className="container">
               <Switch>
                 <Route exact path="/" component={Contacts} />
-                <Route exact path="/contact/add" component={AddContactAction} />
-                <Route exact path="/contact/edit/:id" component={EditContact} />
+                {/* <Route exact path="/contact/add" component={AddContactAction} />
+                <Route exact path="/contact/edit/:id" component={EditContact} /> */}
                 <Route exact path="/about" component={About} />
+                <Route exact path="/specialisation" component={Specialisation} />
                 <Route exact path="/socialMedia" component={SocialMedia} />
                 <Route component={NotFound} />
               </Switch>

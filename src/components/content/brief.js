@@ -6,7 +6,7 @@ export const about = {
   author: {
   name: "UI Software Engineer",
   avatarUrl:
-      "https://pbs.twimg.com/profile_images/461911767384616961/qNMRa7-w_normal.jpeg"
+      "https://pbs.twimg.com/profile_images/461911767384616961/qNMRa7-w_400x400.jpeg"
   }
 };
 

@@ -3,7 +3,7 @@ import React, { Component} from 'react';
 export const Comment = function(props) {
   return (
     <div className="Comment">
-      <div className="container p-3 my-3 border">
+      <div className="container p-3 my-3 border wrapper-box">
         <span>
           <img
             className="Avatar"

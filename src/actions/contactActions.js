@@ -47,19 +47,15 @@ export const getContactAction = id => async dispatch => {
   const res = await axios.get(
     `https://jsonplaceholder.typicode.com/users/${id}`
   );
-
-  console.log("getContactAction");
   dispatch({
     type: GET_CONTACT
   });
   try {
-    // Update payload in reducer on success
     dispatch({
       type: GET_CONTACT_SUCCESS,
       payload: res.data
     });
   } catch (err) {
-    // Update error in reducer on failure
     dispatch({
       type: GET_CONTACT_FAILURE,
       error: err
@@ -75,13 +71,11 @@ export const deleteContactAction = id => async dispatch => {
     type: DELETE_CONTACT
   });
   try {
-    // Update payload in reducer on success
     dispatch({
       type: DELETE_CONTACT_SUCCESS,
       payload: id
     });
   } catch (err) {
-    // Update error in reducer on failure
     dispatch({
       type: DELETE_CONTACT_FAILURE,
       error: err
@@ -100,13 +94,11 @@ export const addContactAction = contact => async dispatch => {
     type: ADD_CONTACT
   });
   try {
-    // Update payload in reducer on success
     dispatch({
       type: ADD_CONTACT_SUCCESS,
       payload: res.data
     });
   } catch (err) {
-    // Update error in reducer on failure
     dispatch({
       type: ADD_CONTACT_FAILURE,
       error: err
@@ -125,13 +117,11 @@ export const updateContactAction = contact => async dispatch => {
     type: UPDATE_CONTACT
   });
   try {
-    // Update payload in reducer on success
     dispatch({
       type: UPDATE_CONTACT_SUCCESS,
       payload: res.data
     });
   } catch (err) {
-    // Update error in reducer on failure
     dispatch({
       type: UPDATE_CONTACT_FAILURE,
       error: err
