@@ -24,8 +24,6 @@ export const getContactsAction = () => async dispatch => {
   const res = await axios.get(
     "https://raw.githubusercontent.com/leolanese/reactjs-playground/master/src/resources/experience.json"
   );
-  console.log("getContactsAction");
-  console.table([res.data][0]);
 
   dispatch({
     type: GET_CONTACTS

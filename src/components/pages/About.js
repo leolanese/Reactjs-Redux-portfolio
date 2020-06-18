@@ -1,10 +1,13 @@
 import React from "react";
 
+import { Title } from './../layout/title';
+import { SubTitle } from './../layout/subtitle';
+
 export default () => {
   return (
     <div>
-      <h1 className="display-4">Portfolio - Leo Lanese</h1>
-      <p className="lead">ReactJS + Redux </p>
+      <Title></Title>
+      <SubTitle></SubTitle>
     </div>
   );
 };

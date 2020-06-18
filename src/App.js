@@ -30,7 +30,7 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Header title="About - Leo Lanese" />
+            <Header title="Portfolio - Leo Lanese" />
             <div className="container">
               <Switch>
                 <Route exact path="/" component={Contacts} />
