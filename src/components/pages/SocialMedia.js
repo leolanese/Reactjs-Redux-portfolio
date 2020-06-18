@@ -26,7 +26,10 @@ export default () => {
             <a href="https://github.com/search?q=user%3Aleolanese+react" title="Some other interesting ReactJS projects">Some other ReactJS projects</a>
           </li>
           <li>
-            <a href="https://www.leolanese.com/portfolio_react/index.html">DEMO</a>
+            <a href="https://www.leolanese.com/portfolio_react/index.html">Portfolio DEMO</a>
+          </li>
+          <li>
+            React tooling: Storybook,
           </li>
       </ul>
       <h3>Angular Experience:</h3>
@@ -38,8 +41,17 @@ export default () => {
             <a href="https://github.com/leolanese?tab=repositories&q=angular&type=&language=" title="Some other interesting ReactJS projects">Some other Angular projects</a>
           </li>
           <li>
-            <a href="https://www.leolanese.com/portfolio_angular/index.html">DEMO</a>
+            <a href="https://www.leolanese.com/portfolio_angular/index.html">Portfolio DEMO</a>
           </li>
+          <li>
+            Angular tooling: Storybook,
+          </li>
+      </ul>
+      <h3>Generic Technology Experience:</h3>
+      <ul>
+        <li>
+          Tooling: npm. npx
+        </li>
       </ul>
     </div>
   </div>

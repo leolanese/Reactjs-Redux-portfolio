@@ -29,6 +29,14 @@ class Contact extends Component {
   render() {
     const { contact } = this.props;
     const { showContactInfo } = this.state;
+    let react, angular;
+
+    if (contact.react === 1) {
+      react = <FontAwesomeIcon icon={faReact} color='#5ed4f4' />;
+    }
+    if (contact.angular === 1) {
+      angular =  <FontAwesomeIcon icon={faAngular} color="#b13138" />
+    }
 
     return (
       <div className="card card-body mb-3">
@@ -74,14 +82,8 @@ class Contact extends Component {
           {showContactInfo ? (
             <ul className="list-group">
               <li className="list-group-item">
-                <FontAwesomeIcon icon={faReact} color="#5ed4f4" />
-                <FontAwesomeIcon icon={faAngular} color="#b13138" />
+                {react}{angular}
                 <FontAwesomeIcon icon={faJs} color="#f7df1e" />
-                <FontAwesomeIcon icon={faCss3} color="#d8e322" />
-                <FontAwesomeIcon icon={faBootstrap} color="#563d7c" />
-                <FontAwesomeIcon icon={faGitSquare} color="#563d7c" />
-                <FontAwesomeIcon icon={faJenkins} color="#563d7c" />
-                <FontAwesomeIcon icon={faNpm} color="#563d7c" />
               </li>
               <li className="list-group-item">{contact.role}</li>
               <li className="list-group-item">
