@@ -29,7 +29,7 @@ export const TechStach = function(props) {
                 <a href="https://github.com/leolanese?tab=repositories&q=angular&type=&language=" title="Some other interesting ReactJS projects">Some other Angular projects</a>
               </li>
               <li>
-                <a href="https://www.leolanese.com/portfolio_angular/index.html">Portfolio DEMO</a>
+                <a href="https://www.leolanese.com/angular-portfolio">Portfolio DEMO</a>
               </li>
               <li>
                 Angular tooling: Redux @ngrx, TypeScript, RxJS, Angular Material, CDK, Karma/Jasmine, etc

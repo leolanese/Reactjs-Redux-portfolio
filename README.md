@@ -1,5 +1,15 @@
 ## ReactJS Redux Portfolio
 
+Run app
+```javascript
+yarn start
+```
+
+Deploy app
+```javascript
+yarn run build
+```
+
 ---
 <h4> Thanks </h4>
 <h5> { 'Leo Lanese',<br>
