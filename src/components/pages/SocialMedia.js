@@ -1,5 +1,8 @@
 import React from "react";
 
+import { CommentsThanks } from "./../layout/CommentsThanks";
+import { about_media } from "./../content/brief";
+
 export default () => {
   return (
     <div>
@@ -17,6 +20,11 @@ export default () => {
       <label>Check the ReactJS code at:</label>
       <img src="https://github.com/leolanese/reactjs-redux-portfolio" />
     </div>
+
+    <CommentsThanks
+      text={about_media.text}
+    />
+
    </div>
   );
 };

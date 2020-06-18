@@ -8,7 +8,8 @@ import Header from "./components/layout/Header";
 import About from "./components/pages/About";
 import SocialMedia from "./components/pages/SocialMedia";
 import NotFound from "./components/pages/NotFound";
-import { about } from "./components/content/brief";
+
+import { about, about_media } from "./components/content/brief";
 
 import { Provider } from "react-redux";
 import store from "./store";
@@ -21,26 +22,7 @@ import { far } from "@fortawesome/free-regular-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-function Comment(props) {
-  return (
-    <div className="Comment">
-      <div className="container p-3 my-3 border">
-        <span>
-          <img
-            className="Avatar"
-            src={props.author.avatarUrl}
-            alt={props.author.name}
-          />
-          <h1 className="UserInfo-name">{props.author.name}</h1>
-        </span>
-        <p>{props.text}</p>
-        <p>{props.extraText}</p>
-      </div>
-      <div className="UserInfo"></div>
-      <div className="Comment-text"></div>
-    </div>
-  );
-}
+import { Comment } from "./components/layout/Comments";
 
 class App extends Component {
   render() {
@@ -65,6 +47,7 @@ class App extends Component {
               extraText={about.extraText}
               author={about.author}
             />
+
           </div>
         </Router>
       </Provider>

@@ -9,3 +9,8 @@ export const about = {
       "https://pbs.twimg.com/profile_images/461911767384616961/qNMRa7-w_normal.jpeg"
   }
 };
+
+
+export const about_media = {
+  text: "TEST XXXXD"
+};

@@ -1,7 +1,5 @@
 ## ReactJS Redux Portfolio
 
-
-
 ---
 <h4> Thanks </h4>
 <h5> { 'Leo Lanese',<br>
