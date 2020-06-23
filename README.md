@@ -1,29 +1,31 @@
 ## ReactJS Redux Portfolio
 
-Run app
+### Run app
 ```javascript
 yarn start
 ```
 
-Deploy app
+### Deploy app
 ```javascript
 yarn run build
 ```
 
 ---
-<h4> Thanks </h4>
-<h5> { 'Leo Lanese',<br>
-       'Building Inspiring Responsive Reactive Solutions',<br>
-       'London, UK' }<br>
-</h5>
-</br>
+### Thanks
+
+```javascript
+  { 'Leo Lanese',
+    'Building Inspiring Responsive Reactive Solutions',
+    'London, UK' }
+```
+
 <h5>Twitter:
 <a href="http://twitter.com/LeoLaneseltd" target="_blank" rel="noreferrer noopener">twitter.com/LeoLaneseltd</a>
 </h5>
 <h5>Portfolio
 <a href="http://www.leolanese.com" target="_blank" rel="noreferrer noopener">http://www.leolanese.com</a>
 </h5>
-<h5>DEV.to:
+<h5>dev.to:
 <a href="http://www.dev.to/leolanese" target="_blank" rel="noreferrer noopener">dev.to/leolanese</a>
 </h5>
 <h5>Blog:
