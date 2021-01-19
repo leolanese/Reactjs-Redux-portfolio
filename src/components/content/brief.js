@@ -4,9 +4,9 @@ export const about = {
   extraText:
     "Insterested in new technologies: ReactJS, Angular, SvelteJS and WebAssembly",
   author: {
-  name: "UI Software Engineer",
-  avatarUrl:
-      "https://pbs.twimg.com/profile_images/461911767384616961/qNMRa7-w_400x400.jpeg"
+    name: "UI Software Engineer",
+    avatarUrl:
+        "https://pbs.twimg.com/profile_images/461911767384616961/qNMRa7-w_400x400.jpeg"
   }
 };
 
