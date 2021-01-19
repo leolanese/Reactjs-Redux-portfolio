@@ -49,6 +49,7 @@ export const getContactsAction = () => async dispatch => {
   }
 };
 
+// CRUD testing propouses
 export const getContactAction = id => async dispatch => {
   const res = await axios.get(
     `https://jsonplaceholder.typicode.com/users/${id}`
@@ -69,6 +70,7 @@ export const getContactAction = id => async dispatch => {
   }
 };
 
+// CRUD testing propouses
 export const deleteContactAction = id => async dispatch => {
   await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
 
