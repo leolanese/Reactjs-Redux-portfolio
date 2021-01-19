@@ -13,7 +13,7 @@ export const TechStach = function(props) {
                 <a href="https://github.com/search?q=user%3Aleolanese+react" title="Some other interesting ReactJS projects" target="_blank">Some other ReactJS projects</a>
               </li>
               <li>
-                React tooling: Jest, Storybook, React-formik, Yup, RBX, Axios, etc.
+                React tooling: Jest, Storybook, React-formik, Yup, RBX, TypeScript, RxJS, Axios, etc.
               </li>
           </ul>
 
