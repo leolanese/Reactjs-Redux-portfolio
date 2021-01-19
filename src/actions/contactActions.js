@@ -20,12 +20,13 @@ import axios from "axios";
 
 // List of Actions
 export const getContactsAction = () => async dispatch => {
-  // const res = await axios.get('https://jsonplaceholder.typicode.com/users');
+  // PRODUCTION
+  // currently pointign at local testing: project `reactjs-ContextAPI-portfolio`
   const res = await axios.get(
     "https://raw.githubusercontent.com/leolanese/reactjs-playground/master/src/resources/experience.json"
   );
 
-  // local testing
+  // LOCAL
   // const res = await axios.get(
   //   "./../src/resources/experience.json"
   // );
