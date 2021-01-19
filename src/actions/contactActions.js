@@ -91,6 +91,7 @@ export const deleteContactAction = id => async dispatch => {
   }
 };
 
+// CRUD testing propouses
 export const addContactAction = contact => async dispatch => {
   const res = await axios.post(
     "https://jsonplaceholder.typicode.com/users",
@@ -114,6 +115,7 @@ export const addContactAction = contact => async dispatch => {
   }
 };
 
+// CRUD testing propouses
 export const updateContactAction = contact => async dispatch => {
   const res = await axios.put(
     `https://jsonplaceholder.typicode.com/users/${contact.id}`,
