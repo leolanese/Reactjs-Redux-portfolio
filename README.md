@@ -1,5 +1,10 @@
 ## ReactJS Redux Portfolio
 
+### Deploy app
+```javascript
+npm i
+```
+
 ### Run app
 ```javascript
 yarn start
