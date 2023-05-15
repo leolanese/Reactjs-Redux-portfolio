@@ -1,6 +1,6 @@
 export const about = {
   text:
-    "I'm a passionately curious Front-end Engineer. Coding better code for a better world. London, UK.",
+    "I am a passionately curious Front-end Engineer. Coding better code for a better world. London, UK.",
   extraText:
     "Insterested in new technologies: ReactJS, Angular, SvelteJS and WebAssembly",
   author: {
