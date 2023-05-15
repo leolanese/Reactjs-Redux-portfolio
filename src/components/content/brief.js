@@ -1,8 +1,8 @@
 export const about = {
   text:
-    "I am a passionately curious Front-end Engineer. Coding better code for a better world. London, UK.",
+    "I live and work in London, UK. Over the last fifteen years, I have solid industry experience in finance and e-commerce applications, specialising in Front-End using Angular and React(NextJS) frameworks under Agile and Scrum Development methodologies. I'm proficient in Functional Programming and Responsive Web Design practices. A keen interest in roles involving tech migration, KYC improvements and UX/UI enhancements across multiple devices.",
   extraText:
-    "Insterested in new technologies: ReactJS, Angular, SvelteJS and WebAssembly",
+    "Throughout my career, I have had the privilege to live and work in countries and cultures such as Argentina, Spain, the UK, and Germany where I have not only learned valuable lessons but also made great friends. Aside from this, I have had the pleasure of presenting at various Javascript conferences around the world.",
   author: {
     name: "UI Software Engineer",
     avatarUrl:
