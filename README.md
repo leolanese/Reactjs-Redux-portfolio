@@ -1,5 +1,11 @@
 ## ReactJS Redux Portfolio
 
+### Source of:
+```js
+// readonly
+https://raw.githubusercontent.com/leolanese/reactjs-playground/master/src/resources/experience.json
+```
+
 ### Deploy app
 ```javascript
 npm i
